@@ -1,0 +1,86 @@
+{
+  "id": "4220889",
+  "name": "2023-8-21qisho",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1046065",
+      "name": "单列列表",
+      "font_class": "danlieliebiao",
+      "unicode": "e6e4",
+      "unicode_decimal": 59108
+    },
+    {
+      "icon_id": "1975869",
+      "name": "全屏",
+      "font_class": "fangda",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "2076270",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e892",
+      "unicode_decimal": 59538
+    },
+    {
+      "icon_id": "4139782",
+      "name": "fs_expense",
+      "font_class": "fs_expense",
+      "unicode": "e77c",
+      "unicode_decimal": 59260
+    },
+    {
+      "icon_id": "4421939",
+      "name": "文档",
+      "font_class": "wendang",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "18170211",
+      "name": "云端,云,云服务",
+      "font_class": "cloud",
+      "unicode": "e988",
+      "unicode_decimal": 59784
+    },
+    {
+      "icon_id": "18309255",
+      "name": "企业管理",
+      "font_class": "qiyeguanli",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "23701114",
+      "name": "Excel-Color",
+      "font_class": "Excel-Color",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "25352816",
+      "name": "账号与安全",
+      "font_class": "zhanghaoyuanquan",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "26841823",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "ea3f",
+      "unicode_decimal": 59967
+    },
+    {
+      "icon_id": "28828865",
+      "name": "待处理",
+      "font_class": "daichuli",
+      "unicode": "e6ef",
+      "unicode_decimal": 59119
+    }
+  ]
+}
