@@ -1,12 +1,13 @@
 <template lang="">
-  <div id='box'>
-    <div>index页面</div>
+  <div>
+    <div>login</div>
   </div>
 </template>
 <script>
 export default {
-  name: 'index'
+  name: 'login'
 }
 </script>
 <style lang="">
+
 </style>
