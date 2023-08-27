@@ -40,6 +40,6 @@ export default {
 }
 .rightContent{
   background-color: #f5f5f5;
-  width: 85vw;
+  flex: 1;
 }
 </style>

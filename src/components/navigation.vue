@@ -6,6 +6,9 @@
         <h1 class='box-top-title'>{{msg}}</h1>
       </div>
     </div>
+    <div class='nav'>
+
+    </div>
   </div>
 </template>
 <script>
@@ -13,6 +16,13 @@ export default {
   name: 'navigator',
   props: {
     msg: String
+  },
+  data () {
+    return {
+      list: [
+        {id: 1, name: '常用操作'}
+      ]
+    }
   }
 }
 </script>
