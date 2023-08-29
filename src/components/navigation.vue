@@ -13,11 +13,15 @@
           <ul>
             <li v-for='cont in item.cont' :key='cont.id'>
               <span class="iconfont" :class="cont.icon"></span>
-              <h3 @click="changeIndex(cont.id)">{{cont.name}}</h3>
+              <h3 @click="changeIndex(cont.id)">
+                <router-link :to="cont.router" class='lin'>
+                  {{cont.name}}
+                </router-link>
+              </h3>
               <dl :class="{'height0': showIndex === cont.id ? false : true}">
-                <dd v-for='list in cont.list' :key='list.id'>
+                <dd v-for='list in cont.list' :key='list.id' @click='_active(list.id)'>
                   <span>></span>
-                  <router-link to="">{{list.name}}</router-link>
+                  <router-link :to="list.router" class='link' :class="{active: list.id===active}">{{list.name}}</router-link>
                 </dd>
               </dl>
             </li>
@@ -37,12 +41,13 @@ export default {
     return {
       // list.cont.list的id
       showIndex: '',
+      active: 0,
       list: [
         {
           id: 1,
           title: '常用操作',
           cont: [
-            {id: 1, name: '首页', icon: 'icon-shouye'}
+            {id: 1, name: '首页', icon: 'icon-shouye', 'router': '/'}
           ]
         },
         {
@@ -50,9 +55,10 @@ export default {
           title: '业务管理',
           cont: [
             {
-              id: 201,
+              id: 2,
               name: '项目任务',
               icon: 'icon-daichuli',
+              'router': '',
               list: [
                 {id: 1, name: '批量新建订单', 'router': '/project1'},
                 {id: 2, name: '项目列表', 'router': '/project2'},
@@ -61,19 +67,21 @@ export default {
               ]
             },
             {
-              id: 202,
+              id: 3,
               name: '资金发票',
               icon: 'icon-fs_expense',
+              'router': '',
               list: [
-                {id: 1, name: '资金发票', 'router': '/project5'}
+                {id: 5, name: '资金发票', 'router': '/project5'}
               ]
             },
             {
-              id: 203,
+              id: 4,
               name: '企业管理',
               icon: 'icon-qiyeguanli',
+              'router': '',
               list: [
-                {id: 1, name: '安全', 'router': '/project6'}
+                {id: 6, name: '安全', 'router': '/project6'}
               ]
             }
           ]
@@ -83,9 +91,10 @@ export default {
           title: '服务中心',
           cont: [
             {
-              id: 1,
+              id: 5,
               name: '身份&安全',
-              icon: 'icon-zhanghaoyuanquan'
+              icon: 'icon-zhanghaoyuanquan',
+              'router': ''
             }
           ]
         }
@@ -101,7 +110,10 @@ export default {
         return this.showIndex = null
       }
       this.showIndex = id
-      console.log(this.showIndex)
+      // console.log(this.showIndex)
+    },
+    _active (id) {
+      this.active = id
     }
   }
 }
@@ -127,5 +139,51 @@ export default {
   .height0{
     height: 0;
     overflow: hidden;
+  }
+  /* 导航栏内容 */
+  .nav{
+    padding: 14px 20px 40px;
+  }
+  .nav>ul>li>p{
+    text-align: start;
+    color: #868e96;
+    font-size: 14px;
+  }
+  .nav>ul>li>ul>li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    margin: 32px 0 32px 12px;
+    width: 150px;
+  }
+  .nav>ul>li>ul>li>span{
+    font-size: 27px;
+    margin-right: 14px;
+  }
+  .nav>ul>li>ul>li>h3{
+    font-size: 18px;
+    color: #616870;
+  }
+  .nav>ul>li>ul>li>dl{
+    color: #90939f;
+    margin-left: 15px;
+    text-align: start;
+  }
+  .nav>ul>li>ul>li>dl>dd{
+    margin: 10px 0;
+  }
+  .nav>ul>li>ul>li>dl>dd>.link{
+    padding-left: 10px;
+    color: #616f7d;
+    text-decoration: none;
+  }
+  .lin{
+    color: #616f7d;
+    text-decoration: none;
+  }
+  .active{
+    color: #2c4198 !important;
+    font-weight: 700;
   }
 </style>
